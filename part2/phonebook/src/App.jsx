@@ -1,33 +1,50 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import service from "./services/phonebook";
 
 const App = () => {
-  const [persons, setPersons] = useState([
-    { name: "Arto Hellas", number: "040-123456", id: 1 },
-    { name: "Ada Lovelace", number: "39-44-5323523", id: 2 },
-    { name: "Dan Abramov", number: "12-43-234345", id: 3 },
-    { name: "Mary Poppendieck", number: "39-23-6423122", id: 4 },
-  ]);
+  const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [search, setSearch] = useState("");
 
+  const effect = () => {
+    service.getAll().then((response) => {
+      setPersons(response);
+    });
+  };
+  useEffect(effect, []);
+
   const addName = (event) => {
     event.preventDefault();
-    if (
-      !persons.reduce((prev, curr) => {
-        return prev || curr.name == newName;
-      }, false)
-    ) {
-      const nameObject = {
-        name: newName,
-        number: newNumber,
-      };
-
-      setPersons(persons.concat(nameObject));
-      setNewName("");
-      setNewNumber("");
+    const nameObject = {
+      name: newName,
+      number: newNumber,
+    };
+    const nameIndexExists = persons.reduce((prev, curr, currIndex, array) => {
+      return curr.name == newName ? array[currIndex].id : prev;
+    }, -1);
+    console.log(nameIndexExists);
+    if (nameIndexExists < 0) {
+      service.create(nameObject).then((response) => {
+        setPersons(persons.concat(response));
+        setNewName("");
+        setNewNumber("");
+      });
     } else {
-      alert(`${newName} already exists`);
+      const shouldReplace = window.confirm(
+        `${newName} already added, replace?`
+      );
+      if (shouldReplace) {
+        service.update(nameIndexExists, nameObject).then((response) => {
+          setPersons(
+            persons.map((person) =>
+              person.id !== nameIndexExists ? person : response
+            )
+          );
+          setNewName("");
+          setNewNumber("");
+        });
+      }
     }
   };
 
@@ -44,6 +61,13 @@ const App = () => {
   const handleNumber = (event) => {
     setNewNumber(event.target.value);
   };
+  const removePerson = (name, id) => {
+    if (window.confirm(`Delete ${name}`)) {
+      service
+        .remove(id)
+        .then(() => setPersons(persons.filter((person) => person.id !== id)));
+    }
+  };
 
   return (
     <div>
@@ -58,7 +82,7 @@ const App = () => {
         handleNumber={handleNumber}
       />
       <h2>Numbers</h2>
-      <Persons persons={personsToShow} />
+      <Persons persons={personsToShow} removePerson={removePerson} />
     </div>
   );
 };
@@ -94,8 +118,11 @@ const Persons = (props) => {
   return (
     <ul>
       {props.persons.map((person) => (
-        <li key={person.name}>
+        <li key={person.id}>
           {person.name} {person.number}
+          <button onClick={() => props.removePerson(person.name, person.id)}>
+            delete
+          </button>
         </li>
       ))}
     </ul>
