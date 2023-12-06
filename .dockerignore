@@ -1,0 +1,182 @@
+# flyctl launch added from part1/anecdotes/.gitignore
+# Logs
+part1/anecdotes/**/logs
+part1/anecdotes/**/*.log
+part1/anecdotes/**/npm-debug.log*
+part1/anecdotes/**/yarn-debug.log*
+part1/anecdotes/**/yarn-error.log*
+part1/anecdotes/**/pnpm-debug.log*
+part1/anecdotes/**/lerna-debug.log*
+
+part1/anecdotes/**/node_modules
+part1/anecdotes/**/dist
+part1/anecdotes/**/dist-ssr
+part1/anecdotes/**/*.local
+
+# Editor directories and files
+part1/anecdotes/**/.vscode/*
+!part1/anecdotes/**/.vscode/extensions.json
+part1/anecdotes/**/.idea
+part1/anecdotes/**/.DS_Store
+part1/anecdotes/**/*.suo
+part1/anecdotes/**/*.ntvs*
+part1/anecdotes/**/*.njsproj
+part1/anecdotes/**/*.sln
+part1/anecdotes/**/*.sw?
+
+# flyctl launch added from part1/courseinfo/.gitignore
+# Logs
+part1/courseinfo/**/logs
+part1/courseinfo/**/*.log
+part1/courseinfo/**/npm-debug.log*
+part1/courseinfo/**/yarn-debug.log*
+part1/courseinfo/**/yarn-error.log*
+part1/courseinfo/**/pnpm-debug.log*
+part1/courseinfo/**/lerna-debug.log*
+
+part1/courseinfo/**/node_modules
+part1/courseinfo/**/dist
+part1/courseinfo/**/dist-ssr
+part1/courseinfo/**/*.local
+
+# Editor directories and files
+part1/courseinfo/**/.vscode/*
+!part1/courseinfo/**/.vscode/extensions.json
+part1/courseinfo/**/.idea
+part1/courseinfo/**/.DS_Store
+part1/courseinfo/**/*.suo
+part1/courseinfo/**/*.ntvs*
+part1/courseinfo/**/*.njsproj
+part1/courseinfo/**/*.sln
+part1/courseinfo/**/*.sw?
+
+# flyctl launch added from part1/part1/.gitignore
+# Logs
+part1/part1/**/logs
+part1/part1/**/*.log
+part1/part1/**/npm-debug.log*
+part1/part1/**/yarn-debug.log*
+part1/part1/**/yarn-error.log*
+part1/part1/**/pnpm-debug.log*
+part1/part1/**/lerna-debug.log*
+
+part1/part1/**/node_modules
+part1/part1/**/dist
+part1/part1/**/dist-ssr
+part1/part1/**/*.local
+
+# Editor directories and files
+part1/part1/**/.vscode/*
+!part1/part1/**/.vscode/extensions.json
+part1/part1/**/.idea
+part1/part1/**/.DS_Store
+part1/part1/**/*.suo
+part1/part1/**/*.ntvs*
+part1/part1/**/*.njsproj
+part1/part1/**/*.sln
+part1/part1/**/*.sw?
+
+# flyctl launch added from part1/unicafe/.gitignore
+# Logs
+part1/unicafe/**/logs
+part1/unicafe/**/*.log
+part1/unicafe/**/npm-debug.log*
+part1/unicafe/**/yarn-debug.log*
+part1/unicafe/**/yarn-error.log*
+part1/unicafe/**/pnpm-debug.log*
+part1/unicafe/**/lerna-debug.log*
+
+part1/unicafe/**/node_modules
+part1/unicafe/**/dist
+part1/unicafe/**/dist-ssr
+part1/unicafe/**/*.local
+
+# Editor directories and files
+part1/unicafe/**/.vscode/*
+!part1/unicafe/**/.vscode/extensions.json
+part1/unicafe/**/.idea
+part1/unicafe/**/.DS_Store
+part1/unicafe/**/*.suo
+part1/unicafe/**/*.ntvs*
+part1/unicafe/**/*.njsproj
+part1/unicafe/**/*.sln
+part1/unicafe/**/*.sw?
+
+# flyctl launch added from part2/courseinfo/.gitignore
+# Logs
+part2/courseinfo/**/logs
+part2/courseinfo/**/*.log
+part2/courseinfo/**/npm-debug.log*
+part2/courseinfo/**/yarn-debug.log*
+part2/courseinfo/**/yarn-error.log*
+part2/courseinfo/**/pnpm-debug.log*
+part2/courseinfo/**/lerna-debug.log*
+
+part2/courseinfo/**/node_modules
+part2/courseinfo/**/dist
+part2/courseinfo/**/dist-ssr
+part2/courseinfo/**/*.local
+
+# Editor directories and files
+part2/courseinfo/**/.vscode/*
+!part2/courseinfo/**/.vscode/extensions.json
+part2/courseinfo/**/.idea
+part2/courseinfo/**/.DS_Store
+part2/courseinfo/**/*.suo
+part2/courseinfo/**/*.ntvs*
+part2/courseinfo/**/*.njsproj
+part2/courseinfo/**/*.sln
+part2/courseinfo/**/*.sw?
+
+# flyctl launch added from part2/part2-notes-frontend/.gitignore
+# Logs
+part2/part2-notes-frontend/**/logs
+part2/part2-notes-frontend/**/*.log
+part2/part2-notes-frontend/**/npm-debug.log*
+part2/part2-notes-frontend/**/yarn-debug.log*
+part2/part2-notes-frontend/**/yarn-error.log*
+part2/part2-notes-frontend/**/pnpm-debug.log*
+part2/part2-notes-frontend/**/lerna-debug.log*
+
+part2/part2-notes-frontend/**/node_modules
+part2/part2-notes-frontend/**/dist
+part2/part2-notes-frontend/**/dist-ssr
+part2/part2-notes-frontend/**/*.local
+
+# Editor directories and files
+part2/part2-notes-frontend/**/.vscode/*
+!part2/part2-notes-frontend/**/.vscode/extensions.json
+part2/part2-notes-frontend/**/.idea
+part2/part2-notes-frontend/**/.DS_Store
+part2/part2-notes-frontend/**/*.suo
+part2/part2-notes-frontend/**/*.ntvs*
+part2/part2-notes-frontend/**/*.njsproj
+part2/part2-notes-frontend/**/*.sln
+part2/part2-notes-frontend/**/*.sw?
+
+# flyctl launch added from part2/phonebook/.gitignore
+# Logs
+part2/phonebook/**/logs
+part2/phonebook/**/*.log
+part2/phonebook/**/npm-debug.log*
+part2/phonebook/**/yarn-debug.log*
+part2/phonebook/**/yarn-error.log*
+part2/phonebook/**/pnpm-debug.log*
+part2/phonebook/**/lerna-debug.log*
+
+part2/phonebook/**/node_modules
+part2/phonebook/**/dist
+part2/phonebook/**/dist-ssr
+part2/phonebook/**/*.local
+
+# Editor directories and files
+part2/phonebook/**/.vscode/*
+!part2/phonebook/**/.vscode/extensions.json
+part2/phonebook/**/.idea
+part2/phonebook/**/.DS_Store
+part2/phonebook/**/*.suo
+part2/phonebook/**/*.ntvs*
+part2/phonebook/**/*.njsproj
+part2/phonebook/**/*.sln
+part2/phonebook/**/*.sw?
+fly.toml
